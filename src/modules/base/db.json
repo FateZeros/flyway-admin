@@ -1,0 +1,63 @@
+{
+  "base_sys_department": [
+    {
+      "id": 1,
+      "name": "admin",
+      "parentId": null,
+      "orderNum": 0
+    },
+    {
+      "id": 11,
+      "name": "开发",
+      "parentId": 12,
+      "orderNum": 2
+    },
+    {
+      "id": 12,
+      "name": "测试",
+      "parentId": 1,
+      "orderNum": 1
+    },
+    {
+      "id": 13,
+      "name": "游客",
+      "parentId": 1,
+      "orderNum": 3
+    }
+  ],
+  "base_sys_role": [
+    {
+      "id": 1,
+      "userId": "1",
+      "name": "超管",
+      "label": "admin",
+      "remark": "最高权限的角色",
+      "relevance": 1,
+      "menuIdList": "null",
+      "departmentIdList": "null"
+    }
+  ],
+  "base_sys_user": [
+    {
+      "id": 1,
+      "departmentId": 1,
+      "name": "超级管理员",
+      "username": "admin",
+      "password": "e10adc3949ba59abbe56e057f20f883e",
+      "passwordV": 7,
+      "nickName": "管理员",
+      "headImg": "",
+      "phone": "18000000000",
+      "email": "",
+      "status": 1,
+      "remark": "拥有最高权限的用户",
+      "socketId": null
+    }
+  ],
+  "base_sys_user_role": [
+    {
+      "userId": 1,
+      "roleId": 1
+    }
+  ]
+}

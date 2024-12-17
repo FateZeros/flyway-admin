@@ -36,6 +36,10 @@ export class OujiTemplateService extends BaseService {
       linebreaks: true,
     });
 
+    doc.render({
+      ...params,
+    });
+
     const buf = doc.getZip().generate({
       type: 'nodebuffer',
       // Compression: DEFLATE adds a compression step.
@@ -43,7 +47,7 @@ export class OujiTemplateService extends BaseService {
       compression: 'DEFLATE',
     });
 
-    const currentName = `${name}_${moment().format('YYYY_MM_DD_HH:mm:ss')}`;
+    const currentName = `${name}_${moment().format('YYYY_MM_DD_HH_mm_ss')}`;
     const writeTemplateFilePath = path.join(
       this.app.getBaseDir(),
       '..',
